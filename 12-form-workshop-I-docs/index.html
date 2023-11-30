@@ -37,6 +37,7 @@
 
       <div class="row row-col-12 p-2 d-flex justify-content-center" style="height: 400px;">
           <form class="bg-white p-5 rounded-3 w-50 needs-validation" novalidate>
+            <div id="liveAlertPlaceholder"></div>
             <div class="form-group mb-2">
               <input type="text" class="form-control" id="first_name" placeholder="First Name" required>
               <div class="invalid-feedback">
@@ -62,7 +63,7 @@
               </div>
             </div>
             <div class="row d-flex justify-content-center m-auto">
-              <button type="submit" value="Submit" class="btn:focus green text-light rounded-1 p-2"><strong>CLAIM YOUR FREE TRIAL</strong></button>
+              <button type="submit" value="Submit" class="btn:focus green text-light rounded-1 p-2" id="liveAlertBtn"><strong>CLAIM YOUR FREE TRIAL</strong></button>
             </div>
             <div class="fs-6 pt-3 d-flex justify-content-center text-secondary">
               <p>By checking the button you are agreeing to our <a href="#" class="text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><strong>Terms and Service</strong></a></p>
@@ -115,6 +116,28 @@
           }, false)
         })
       })()
+    </script>
+
+    <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+      }
+
+      const alertTrigger = document.getElementById('liveAlertBtn')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          appendAlert('Success', 'success')
+        })
+      }
     </script>
   </body>
 </html>
