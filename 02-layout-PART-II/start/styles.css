@@ -5,6 +5,13 @@
 }
 body {
   height: 100vh;
+  padding: 0 !important;
+  background: wheat;
+
+  /* Overide BootStrp
+  1. Cascading
+  2. Important
+  3. Custom SCSS */
 }
 
 body::before {

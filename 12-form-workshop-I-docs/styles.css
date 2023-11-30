@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Kanit&family=Poppins:wght@400;500&family=Raleway&family=Roboto:ital,wght@0,400;0,500;1,300&family=Rubik&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.purple {
+    background-color: #5d54a4;
+    border: #5d54a4;
+}
+
+.green {
+    background-color: #38cc8a;
+    border: 3px solid #30c085;
+}
