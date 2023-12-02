@@ -28,16 +28,18 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-primary">
+  <body class="vh-100">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="container-fluid col-sm-6 col-md-7 col-xl-7 col-lg-6">
+        <div class="p-3 d-flex justify-content-center">
+          <button class="shadow purple text-light btn:focus w-50 rounded-3 p-3"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
+        </div>
 
-    <div class="container">
-      <div class="row p-2 d-flex justify-content-center">
-        <button class="shadow purple text-light btn:focus w-50 rounded-3 p-3"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
-      </div>
+        <div class="card p-5">
+          <div class="card-body">
+            <form class="bg-white p-3 needs-validation" novalidate>
 
-
-      <div class="row p-2 d-flex justify-content-center" style="height: 400px;">
-          <form class="bg-white p-5 rounded-3 w-50 needs-validation" novalidate>
+            <!-- icon alert -->
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
               <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -48,8 +50,9 @@
             <div class="alert alert-success alert-dismissible fade show d-none" id="show-alert" role="alert">
               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
               <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              <strong>Success!</strong> You can do it.
+              <strong>Success!</strong>
             </div>
+
             <div class="form-group mb-2">
               <input type="text" class="form-control" id="first_name" placeholder="First Name" required>
               <div class="invalid-feedback">
@@ -75,85 +78,85 @@
               </div>
             </div>
             <div class="row d-flex justify-content-center m-auto">
-              <button type="submit" value="Submit" class="btn:focus green text-light rounded-1 p-2" id="liveAlertBtn"><strong>CLAIM YOUR FREE TRIAL</strong></button>
-              <!-- <button type="submit" value="Submit" class="btn:focus green text-light rounded-1 p-2" id="alert-trigger"><strong>CLAIM YOUR FREE TRIAL</strong></button> -->
-              
+              <button type="submit" value="Submit" class="btn:focus green text-light rounded-1 p-2" id="liveAlertBtn"><b>CLAIM YOUR FREE TRIAL</b></button>              
             </div>
             <div class="fs-6 pt-3 d-flex justify-content-center text-secondary">
-              <p>By checking the button you are agreeing to our <a href="#" class="text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><strong>Terms and Service</strong></a></p>
+              <p>By checking the button you are agreeing to our <a href="#" class="text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Terms and Service</b></a></p>
             </div>
           </form>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Terms and Service</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quasi deserunt voluptates itaque doloremque a eveniet incidunt ducimus porro eligendi ipsa nemo quam blanditiis alias iusto, culpa sed illum facilis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-        (() => {
-          'use strict'
-
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          const forms = document.querySelectorAll('.needs-validation')
-
-          // Loop over them and prevent submission
-          Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-              if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              }else {
-                // Show the success alert
-                var alertElement = document.getElementById("show-alert");
-                alertElement.classList.remove("d-none");
-    
-                // Set a flag in localStorage to indicate form submission success
-                localStorage.setItem('formSubmitted', 'true');
-              }
-
-              form.classList.add('was-validated')
-            }, false)
-          })
-
-          if (localStorage.getItem('formSubmitted') === 'true') {
-          var alertElement = document.getElementById("show-alert");
-          alertElement.classList.remove("d-none");
-
-          // Hide the alert after 5 seconds
-          setTimeout(function () {
-            alertElement.classList.remove("show");
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="modal-title fs-5" id="staticBackdropLabel">Terms and Service</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quasi deserunt voluptates itaque doloremque a eveniet incidunt ducimus porro eligendi ipsa nemo quam blanditiis alias iusto, culpa sed illum facilis.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed illo hic quos accusamus eum vero sapiente consequatur sit culpa quibusdam nam amet, laudantium excepturi illum corrupti quas ratione eveniet.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script>
+          (() => {
+            'use strict'
+  
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+  
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+              form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }else {
+                  // Show the success alert
+                  var alertElement = document.getElementById("show-alert");
+                  alertElement.classList.remove("d-none");
+      
+                  // Set a flag in localStorage to indicate form submission success
+                  localStorage.setItem('formSubmitted', 'true');
+                }
+  
+                form.classList.add('was-validated')
+              }, false)
+            })
+  
+            if (localStorage.getItem('formSubmitted') === 'true') {
+            var alertElement = document.getElementById("show-alert");
+            alertElement.classList.remove("d-none");
+  
+            // Hide the alert after 5 seconds
             setTimeout(function () {
-              alertElement.classList.add("d-none");
-
-          //     // Clear localStorage after hiding the alert
-              localStorage.removeItem('formSubmitted');
-            }, 150); // 150ms is the duration of Bootstrap's fade transition
-          }, 5000); // 5000ms (5 seconds)
-        }
-
-        })()
-    </script>
+              alertElement.classList.remove("show");
+              setTimeout(function () {
+                alertElement.classList.add("d-none");
+  
+            //     // Clear localStorage after hiding the alert
+                localStorage.removeItem('formSubmitted');
+              }, 150); // 150ms is the duration of Bootstrap's fade transition
+            }, 5000); // 5000ms (5 seconds)
+          }
+  
+          })()
+      </script>
   </body>
 </html>
