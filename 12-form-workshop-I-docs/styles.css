@@ -13,3 +13,10 @@ body {
     background-color: #38cc8a;
     border: 3px solid #30c085;
 }
+
+body {text-align: center;}#alert-trigger{background-color: green; padding: 5px; color: #FFF;}
+
+#example {background-color: grey;padding: 10px;margin: 10px 0px;
+  opacity:0; /* initial opacity value set to 0 */
+  transition: all 1s; /* will fade the element instead of hiding/showing the element instantly */
+}
